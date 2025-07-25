@@ -14,7 +14,6 @@ Function opop
 	
 	$segsd = [System.Convert]::FromBase64String($K)
 		
-	$werfg = (New-Object  Management.Automation.PSCredential ' ', ($obfString |ConvertTo-SecureString -Key  $segsd)).GetNetworkCredential().Password
-
+	$werfg = ConvertTo-SecureString -String $obfString -AsPlainText -Force
 	return $werfg
 }
