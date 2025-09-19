@@ -1,4 +1,4 @@
-notepad.exe
+
 
 
 Function sdfes
@@ -44,6 +44,7 @@ function poweredpower
 	
 }
 poweredpower
+
 
 
 
